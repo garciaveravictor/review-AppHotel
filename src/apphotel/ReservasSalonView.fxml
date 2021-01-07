@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="742.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apphotel.ReservasSalonViewController">
+   <children>
+      <TableView fx:id="tableViewHabitaciones" layoutX="14.0" layoutY="14.0" prefHeight="453.0" prefWidth="721.0">
+        <columns>
+          <TableColumn fx:id="columnDNI" prefWidth="75.0" text="DNI" />
+          <TableColumn fx:id="columnNombre" prefWidth="101.0" text="Nombre" />
+            <TableColumn fx:id="columnTipoEvento" prefWidth="97.0" text="Tipo de evento" />
+            <TableColumn fx:id="columnNPersonas" prefWidth="79.0" text="Nº Personas" />
+            <TableColumn fx:id="columnCocina" prefWidth="116.0" text="Cocina" />
+            <TableColumn fx:id="columnNHabitaciones" prefWidth="99.0" text="Nº Habitaciones" />
+            <TableColumn fx:id="columnFecha" prefWidth="100.0" text="Fecha" />
+            <TableColumn fx:id="columnDias" prefWidth="53.0" text="Días" />
+        </columns>
+      </TableView>
+      <Button fx:id="buttonListo" layoutX="694.0" layoutY="475.0" mnemonicParsing="false" onAction="#onActionButtonListo" text="Cerrar" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="387.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apphotel.MainViewController">
+   <children>
+      <VBox layoutX="-1.0" layoutY="-1.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <MenuBar prefWidth="600.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Ver">
+                  <items>
+                        <MenuItem fx:id="menuItemMostrarClientes" mnemonicParsing="false" onAction="#onActionMostrarClientes" text="Mostrar Clientes" />
+                        <MenuItem fx:id="menuItemMostrarReservasHabitaciones" mnemonicParsing="false" onAction="#onActionMostrarReservasHabitaciones" text="Mostrar Reservas de habitaciones" />
+                        <MenuItem fx:id="menuItemMostrarReservasSalon" mnemonicParsing="false" onAction="#onActionMostrarReservasSalon" text="Mostrar Reservas de salón" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Reserva">
+                  <items>
+                    <MenuItem fx:id="menuItemHabitaciones" mnemonicParsing="false" onAction="#onActionHabitaciones" text="Habitaciones" />
+                        <MenuItem fx:id="menuItemSalonHabana" mnemonicParsing="false" onAction="#onActionSalonHabana" text="Salón Habana" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Ayuda">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ImageView fitHeight="374.0" fitWidth="602.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/imageMain.PNG" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

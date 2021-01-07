@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #dfe5f3;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apphotel.SalonViewController">
+    <stylesheets>
+        <URL value="@salonview.css" />
+    </stylesheets>
+   <children>
+      <HBox prefHeight="37.0" prefWidth="200.0">
+         <children>
+            <Label style="-fx-font-weight: bold;" text="Datos del Cliente" underline="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="50.0" top="35.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="1.0" layoutY="65.0" prefHeight="30.0" prefWidth="600.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="49.0" text="DNI/CIF:">
+               <opaqueInsets>
+                  <Insets top="5.0" />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="2.5" />
+               </padding>
+            </Label>
+            <TextField fx:id="textFieldDNI">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Label text="Nombre:">
+               <opaqueInsets>
+                  <Insets top="5.0" />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="2.5" />
+               </padding>
+            </Label>
+            <TextField fx:id="textFieldNombre" disable="true" prefHeight="25.0" prefWidth="222.0" />
+         </children>
+         <padding>
+            <Insets left="50.0" right="50.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="1.0" layoutY="100.0" prefHeight="30.0" prefWidth="600.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="58.0" text="Dirección:">
+               <opaqueInsets>
+                  <Insets top="5.0" />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="2.5" />
+               </padding>
+            </Label>
+            <TextField fx:id="textFieldDireccion" disable="true" prefHeight="25.0" prefWidth="198.0">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Label text="Teléfono:">
+               <opaqueInsets>
+                  <Insets top="5.0" />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="2.5" />
+               </padding>
+            </Label>
+            <TextField fx:id="textFieldTelefono" disable="true" prefHeight="25.0" prefWidth="161.0" />
+         </children>
+         <padding>
+            <Insets left="50.0" right="50.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox layoutY="134.0" prefHeight="78.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="76.0" prefWidth="135.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="140.0" style="-fx-font-weight: bold;" text="Datos de la reserva" underline="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label style="-fx-font-weight: bold;" text="Tipo de evento" />
+               </children>
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+      </HBox>
+      <HBox layoutY="212.0" prefHeight="21.0" prefWidth="600.0">
+         <children>
+            <RadioButton fx:id="radioButtonBanquete" mnemonicParsing="false" onAction="#onActionSelecionadoBanquete" text="Banquete">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="2.5" />
+               </padding>
+            </RadioButton>
+            <Label text="Número de personas:">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="2.5" />
+               </padding>
+            </Label>
+            <TextField fx:id="textFieldNumeroPersonas" prefHeight="25.0" prefWidth="40.0">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Label text="Tipo de cocina:">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="2.5" />
+               </padding>
+            </Label>
+            <ChoiceBox fx:id="choiceBoxTipoCocina" disable="true" prefHeight="25.0" prefWidth="159.0" />
+         </children>
+         <padding>
+            <Insets left="50.0" right="50.0" />
+         </padding>
+      </HBox>
+      <HBox layoutY="238.0" prefHeight="25.0" prefWidth="600.0">
+         <children>
+            <RadioButton fx:id="radioButtonJornada" mnemonicParsing="false" onAction="#onActionSelecionadoJornada" text="Jornada">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="2.5" />
+               </padding>
+            </RadioButton>
+         </children>
+         <padding>
+            <Insets left="50.0" right="50.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="1.0" layoutY="263.0" prefHeight="25.0" prefWidth="600.0">
+         <children>
+            <RadioButton fx:id="radioButtonCongreso" mnemonicParsing="false" onAction="#onActionSelecionadoCongreso" text="Congreso">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="2.5" />
+               </padding>
+            </RadioButton>
+            <CheckBox fx:id="checkBoxHabitaciones" mnemonicParsing="false" onAction="#onActionCheckBoxHabitaciones" text="¿Necesitas habitaciones?">
+               <padding>
+                  <Insets top="2.5" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </CheckBox>
+            <Label text="¿Cuantas?">
+               <padding>
+                  <Insets top="2.5" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="textFieldNumeroHabitaciones" disable="true" prefHeight="25.0" prefWidth="40.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <padding>
+            <Insets left="50.0" right="50.0" />
+         </padding>
+      </HBox>
+      <HBox layoutY="288.0" prefHeight="25.0" prefWidth="600.0">
+         <children>
+            <DatePicker fx:id="datePickerFecha" prefHeight="25.0" prefWidth="219.0" promptText="Fecha de evento" />
+            <Label text="Numero de días">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="2.5" />
+               </padding>
+            </Label>
+            <TextField fx:id="textFieldNumeroDias" prefHeight="25.0" prefWidth="40.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Label fx:id="labelInformacion" prefHeight="20.0" prefWidth="122.0">
+               <padding>
+                  <Insets top="2.5" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="50.0" right="50.0" top="20.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="-2.0" layoutY="333.0" prefHeight="100.0" prefWidth="348.0">
+         <children>
+            <ImageView fitHeight="88.0" fitWidth="282.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/salon.jpg" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets left="50.0" right="50.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="-1.0" layoutY="433.0" prefHeight="56.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="buttonLimpiar" mnemonicParsing="false" onAction="#onActionLimpiar" style="-fx-background-color: #becbe2;" text="Limpiar">
+               <HBox.margin>
+                  <Insets left="50.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <HBox prefHeight="36.0" prefWidth="134.0">
+               <children>
+                  <Button fx:id="buttonAceptar" mnemonicParsing="false" onAction="#onActionAceptar" style="-fx-background-color: #becbe2;" text="Aceptar">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="buttonCancelar" mnemonicParsing="false" onAction="#onActionCancelar" style="-fx-background-color: #becbe2;" text="Cancelar" />
+               </children>
+               <HBox.margin>
+                  <Insets left="325.0" top="20.0" />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

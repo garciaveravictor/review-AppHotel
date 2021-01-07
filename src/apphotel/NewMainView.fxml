@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('img/hotelDubai.png'); -fx-background-size: 100% 100%;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apphotel.NewMainViewController">
+   <top>
+      <Label text="AppHotel - Grupo Cosmic" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Gabriola" size="45.0" />
+         </font>
+      </Label>
+   </top>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+   <right>
+      <VBox prefHeight="286.0" prefWidth="270.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#OnClickedVerClientes" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/customer_100px.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Ver Clientes">
+                     <font>
+                        <Font name="Gabriola" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#OnClickedVerHabitaciones" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/hotel_bed_VerRservas.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Ver Reservas Habitaciones">
+                     <font>
+                        <Font name="Gabriola" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#OnClickedVerSalon" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/hotel_building_verReservas.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Ver Reservas Salón">
+                     <font>
+                        <Font name="Gabriola" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="58.0" prefWidth="540.0" spacing="300.0" BorderPane.alignment="CENTER_RIGHT">
+         <children>
+            <HBox alignment="CENTER_RIGHT" onMouseClicked="#OnClickedSalir">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" text="Salir">
+                     <font>
+                        <Font name="Gabriola" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="60.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/exit_100px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="150.0">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" onMouseClicked="#OnClickedAbout" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/about_100px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </bottom>
+   <left>
+      <VBox prefHeight="286.0" prefWidth="270.0" spacing="10.0" BorderPane.alignment="BOTTOM_RIGHT">
+         <children>
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#OnClickedHabitacion" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/hotel_bed_100px.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Crear reserva Habitación">
+                     <font>
+                        <Font name="Gabriola" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#OnClickedSalon" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/hotel_building_100px.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Crear reserva Salón">
+                     <font>
+                        <Font name="Gabriola" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="30.0" top="30.0" />
+         </padding>
+      </VBox>
+   </left>
+</BorderPane>
